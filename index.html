@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+	<title>Frontend Mentor | E-commerce product page</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+	<div class="head">
+		<header class="head">
+			<img id="open-menu" class="open-menu" src="images/icon-menu.svg" alt="">
+			<div class="logo">
+				<img src="images/logo.svg" alt="">
+			</div>
+			<nav class="navlinks">
+				<a href="#" class="navlink">collections</a>
+				<a href="#" class="navlink">men</a>
+				<a href="#" class="navlink">women</a>
+				<a href="#" class="navlink">about</a>
+				<a href="#" class="navlink">contact</a>
+			</nav>
+			<div class="header-end">
+				<div class="header-cart">
+					<p class="cart-count count-number">0</p>
+					<img id="cart-img" src="images/icon-cart.svg" alt="">
+				</div>
+				<img class="avatar" src="images/image-avatar.png" alt="">
+			</div>
+			<div class="cart-info">
+				<div class="cart-header">
+					<p><strong>Cart</strong></p>
+				</div>
+				<div class="item-info height-100 ">
+					<div class="cart-not-empty display-none">
+						<img class="cart-img" src="images/image-product-1-thumbnail.jpg" alt="">
+						<div class="item-cost">
+							<p>Fall Limited Edition Sneakers</p>
+							<p>$125.00 x <span class="count-number ">0</span> <strong
+									class="final-price">$375.00</strong></p>
+						</div>
+						<img class="delete" src="images/icon-delete.svg" alt="">
+					</div>
+					<p class="empty-cart">Your cart is empty.</p>
+				</div>
+
+				<button class="checkout button display-none">Checkout</button>
+			</div>
+		</header>
+	</div>
+	<div class="slide-bar">
+		<img id="close-menu" src="images/icon-close.svg" alt="">
+		<ul>
+			<li><a href="#" class="navlink slide-link">Collections</a></li>
+			<li><a href="#" class="navlink slide-link">Men</a></li>
+			<li><a href="#" class="navlink slide-link">Women</a></li>
+			<li><a href="#" class="navlink slide-link">About</a></li>
+			<li><a href="#" class="navlink slide-link">Contact</a></li>
+		</ul>
+	</div>
+
+
+	<main class="main">
+		<div id="overflow"></div>
+		<div class="product">
+			<div class="item-pictures">
+				<div class="main-picture">
+					<div class="control previous">
+						<img src="images/icon-previous.svg" alt="" class="previous">
+					</div>
+					<img class="big-image" src="images/image-product-1.jpg" alt="">
+					<div class="control next">
+						<img src="images/icon-next.svg" alt="" class="next">
+					</div>
+				</div>
+				<div class="image-thumbnails">
+					<div class="thumbnail border-4">
+						<img class="opacity-5" src="images/image-product-1-thumbnail.jpg" alt="">
+					</div>
+					<div class="thumbnail">
+						<img src="images/image-product-2-thumbnail.jpg" alt="">
+					</div>
+					<div class="thumbnail"><img src="images/image-product-3-thumbnail.jpg" alt="">
+					</div>
+					<div class="thumbnail">
+						<img src="images/image-product-4-thumbnail.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="item-description">
+				<p class="company-name">sneaker company</p>
+				<h1 class="product-name">fall limited edition sneakers </h1>
+				<p class="product-description">
+					These low profile sneakers are your perfect casual wear companion.
+					Featuring a durable rubber outer sole. they'll withstand everything the weather can offer
+				</p>
+				<div class="price">
+					<div class="discount">
+						<h1>$125.00</h1>
+						<p>50%</p>
+					</div>
+					<p class="initial-price">$250.00</p>
+				</div>
+				<div class="purchase">
+					<div class="count">
+						<img src="images/icon-minus.svg" class="minus" alt="">
+						<p class="count-number">0</p>
+						<img src="images/icon-plus.svg" class="add" alt="">
+					</div>
+					<button class="button">
+						<img src="images/icon-cart-white.svg" alt="">
+						<p>Add to cart</p>
+					</button>
+
+				</div>
+
+			</div>
+
+		</div>
+	</main>
+	<script src="index.js"></script>
+</body>
+
+</html>

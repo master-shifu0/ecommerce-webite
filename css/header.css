@@ -1,0 +1,157 @@
+header {
+    display: grid;
+    grid-template-columns: .1fr max-content minmax(250px, 1.5fr) auto .1fr;
+    box-sizing: border-box;
+    padding: 1.5rem 0;
+    align-items: center;
+    gap: 2.5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    max-width: 1200px;
+    box-shadow: 1px 6px 2px -7px;
+    background-color: var(--white);
+}
+
+.open-menu {
+    display: none;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 2em;
+    font-weight: 700;
+}
+
+
+
+ul {
+    padding: 3rem 0 0 0;
+}
+
+.logo {
+    grid-column: 2/3;
+}
+
+.navlinks {
+    display: flex;
+    gap: 3%;
+}
+
+.navlink {
+    position: relative;
+    text-transform: capitalize;
+    color: var(--dark-blue);
+    opacity: .6;
+}
+
+.navlink:hover.navlink::after {
+    width: 100%;
+}
+
+.navlink::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-orange);
+    width: 0;
+    bottom: -2rem;
+    left: 0;
+    height: 3px;
+    transition: width 150ms ease-in-out;
+}
+
+.avatar {
+    max-width: 40px;
+    min-width: 30px;
+}
+
+.header-end {
+    display: flex;
+    gap: 1rem;
+    grid-column: 4/5;
+    align-items: center;
+}
+
+.slide-link {
+    opacity: 0;
+    transition: opacity 100ms;
+}
+
+.slide-bar {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    padding: 2em;
+    transform: scale(0, 1);
+    transition: transform 350ms ease-in-out;
+    transform-origin: left;
+    background-color: #fff;
+    z-index: 200;
+
+}
+
+.header-cart {
+    position: relative;
+}
+
+.avatar:hover {
+    border: 2px solid var(--main-orange);
+    border-radius: 50%;
+}
+
+.cart-count {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    font-size: .5rem;
+    background-color: var(--main-orange);
+    color: var(--white);
+    width: 75%;
+    left: 50%;
+    text-align: center;
+    border-radius: .4rem;
+    display: none;
+}
+
+/* JS CLASSES */
+.slide-bar-open {
+    transform: scale(1, 1);
+}
+
+.navlink-open {
+    opacity: 100%;
+}
+
+.full-page {
+    height: 100%;
+    width: 100%;
+    background-color: var(--black);
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 50%;
+}
+
+@media screen and (max-width: 630px) {
+    .navlinks {
+        display: none;
+    }
+
+    header {
+        grid-template-columns: .1fr max-content auto max-content .1fr;
+    }
+
+    .logo {
+        grid-column: 3/4;
+    }
+
+    .open-menu {
+        display: block;
+        grid-column: 2/3;
+    }
+}
